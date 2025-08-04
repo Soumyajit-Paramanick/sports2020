@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Form, Button} from 'react-bootstrap';
+import { Container, Row, Col, Card, Form} from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import API from '../config'; // ✅ Imported centralized config
 const Products = () => {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [filters, setFilters] = useState({
     category: '',
     minPrice: '',
@@ -13,12 +12,6 @@ const Products = () => {
     search: ''
   });
 
-  useEffect(() => {
-    // ✅ Used config API.CATEGORIES
-    axios.get(API.CATEGORIES)
-      .then(response => setCategories(response.data))
-      .catch(error => console.error('Error fetching categories:', error));
-  }, []);
 
   useEffect(() => {
     let url = API.PRODUCTS; // ✅ Used config API.PRODUCTS

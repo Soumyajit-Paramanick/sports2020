@@ -48,9 +48,9 @@ const Footer = () => {
           <Col xs={12} className="text-center mb-2">
             <p className="mb-1">
               <strong>Note:</strong> 7 days{' '}
-              <a href="#" onClick={handleShow} className="text-decoration-underline text-white">
+              <button onClick={handleShow} className="btn btn-link text-white p-0 text-decoration-underline">
                 return policy
-              </a>{' '}
+              </button>{' '}
               is applicable over all products.
             </p>
             <p className="mb-0">
