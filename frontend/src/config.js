@@ -11,7 +11,7 @@
 // export default API;
 
 // --- LOCAL TESTING CONFIG ---
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://sports2020-production.up.railway.app";
 
 const API = {
   PRODUCTS: `${BASE_URL}/api/products/`,
