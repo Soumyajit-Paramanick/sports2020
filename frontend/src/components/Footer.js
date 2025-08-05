@@ -77,7 +77,7 @@ const Footer = () => {
           </p>
           <p>
             If approved, your refund will be processed, and a credit will automatically be applied
-            to your original method of payment within a certain amount of days.
+            to your original method of payment within 15 days.
           </p>
           <p>
             Please note that return shipping costs are the responsibility of the customer unless the
