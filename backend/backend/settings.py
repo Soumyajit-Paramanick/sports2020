@@ -103,7 +103,7 @@ CORS_ALLOWED_ORIGINS = [
 # ✅ CSRF trusted origins (for POST/PUT/DELETE from frontend)
 CSRF_TRUSTED_ORIGINS = [
     "https://sports2020-production.up.railway.app",
-    "https://fulfilling-adventure-production.up.railway.app/",
+    "https://fulfilling-adventure-production.up.railway.app",
     "https://sports2020.co.in",
     "https://www.sports2020.co.in",
 ]
