@@ -28,12 +28,18 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'short_description', 'price', 'category', 'images']
 
 class PromotionalBannerSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
     is_currently_active = serializers.BooleanField(read_only=True)
-    image = serializers.ImageField(read_only=True)
 
     class Meta:
         model = PromotionalBanner
         fields = ['id', 'message', 'is_active', 'start_time', 'end_time', 'is_currently_active', 'image', 'width', 'height']
+
+    def get_image(self, obj):
+        request = self.context.get('request')
+        if request:
+            return request.build_absolute_uri(obj.image.url)
+        return obj.image.url
 
 class GalleryImageSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
@@ -60,6 +66,7 @@ class HomepageBannerSerializer(serializers.ModelSerializer):
         if request:
             return request.build_absolute_uri(obj.image.url)
         return obj.image.url
+
 
 
 

@@ -1,8 +1,14 @@
 from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
-from .models import Product, Category
-from .serializers import ProductSerializer, CategorySerializer
+from .models import Product, Category, PromotionalBanner, GalleryImage, HomepageBanner
+from .serializers import (
+    ProductSerializer,
+    CategorySerializer,
+    PromotionalBannerSerializer,
+    GalleryImageSerializer,
+    HomepageBannerSerializer,
+)
 
 class ProductList(generics.ListAPIView):
     queryset = Product.objects.all()
@@ -35,9 +41,8 @@ class CategoryList(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-from .models import PromotionalBanner
-from .serializers import PromotionalBannerSerializer
-from django.utils import timezone
+    def get_serializer_context(self):
+        return {'request': self.request}
 
 class PromotionalBannerList(generics.ListAPIView):
     queryset = PromotionalBanner.objects.filter(is_active=True)
@@ -46,9 +51,6 @@ class PromotionalBannerList(generics.ListAPIView):
     def get_serializer_context(self):
         return {'request': self.request}
 
-from .models import GalleryImage
-from .serializers import GalleryImageSerializer
-
 class GalleryImages(generics.ListAPIView):
     queryset = GalleryImage.objects.filter(is_active=True)
     serializer_class = GalleryImageSerializer
@@ -56,15 +58,13 @@ class GalleryImages(generics.ListAPIView):
     def get_serializer_context(self):
         return {'request': self.request}
 
-from .models import HomepageBanner
-from .serializers import HomepageBannerSerializer
-
 class HomepageBannerList(generics.ListAPIView):
     queryset = HomepageBanner.objects.filter(is_active=True)
     serializer_class = HomepageBannerSerializer
 
     def get_serializer_context(self):
         return {'request': self.request}
+
 
 
 
