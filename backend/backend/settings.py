@@ -93,7 +93,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ✅ CORS setup (ALLOW frontend → backend requests)
 CORS_ALLOWED_ORIGINS = [
-    "https://sports2020-production.up.railway.app",      # ✅ Your backend
+    "https://api.sports2020.co.in",      # ✅ Your backend
     "https://fulfilling-adventure-production.up.railway.app",              # ✅ Railway frontend
     "https://sports2020.co.in",                                         # ✅ your domain root
     "https://www.sports2020.co.in",                                     # ✅ your domain www
@@ -102,7 +102,7 @@ CORS_ALLOWED_ORIGINS = [
 
 # ✅ CSRF trusted origins (for POST/PUT/DELETE from frontend)
 CSRF_TRUSTED_ORIGINS = [
-    "https://sports2020-production.up.railway.app",
+    "https://api.sports2020.co.in",
     "https://fulfilling-adventure-production.up.railway.app",
     "https://sports2020.co.in",
     "https://www.sports2020.co.in",
