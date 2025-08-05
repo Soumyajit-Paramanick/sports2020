@@ -24,7 +24,7 @@ const About = () => {
           <p className="lead">
             We believe that great gear shouldn't come with a hefty price tag. That's why we're committed to sourcing and selling a wide range of products—from <em>cricket bats</em> and <em>footballs</em> to <em>yoga mats</em> and <em>running shoes</em>—that meet our high standards for quality and durability.
           </p>
-          <p>
+          <p className="lead">
             Our team is passionate about sports, and we're dedicated to providing <strong>excellent customer service</strong>. Whether you're looking for expert advice or just need help finding the right size, we're here to help you get the equipment you need to play your best.
           </p>
           <p className="lead">
