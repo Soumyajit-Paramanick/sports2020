@@ -121,15 +121,7 @@ This project is a fully functional full-stack web application built with:
 
 ## 🎥 Demo Video
 
-<details>
-<summary>Click to view project demo</summary>
-
-<video width="100%" autoplay muted controls>
-  <source src="https://raw.githubusercontent.com/Soumyajit-Paramanick/sports2020/main/demo/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-</details>
+> 📌 *A short demo video showcasing the project’s features will be added soon.*
 
 
 ---
